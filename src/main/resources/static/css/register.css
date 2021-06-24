@@ -112,7 +112,7 @@
 }
 
 .in-email {
-  border: 1px solid lightgray;
+  border: 1px solid gray;
   background-color: transparent;
   width: 100%;
   padding: 8px 10px;
@@ -122,7 +122,7 @@
 }
 
 .in-password {
-  border: 1px solid lightgray;
+  border: 1px solid gray;
   background-color: transparent;
   width: 100%;
   padding: 8px 40px 8px 10px;
