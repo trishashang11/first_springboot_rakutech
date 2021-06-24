@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<section class="bg-images">
+
+    <div class="content-container">
+
+        <div class="raku-title">
+            <span class="raku-title--rak">RAKU<span class="raku-title--tech">TECH</span></span>
+            <hr class="raku-hr"/>
+            <p class="raku-description">Browse from over 500 devices in your area.</p>
+        </div>
+
+        <div class="logform">
+
+            <p class="signupTitle">Sign Up</p>
+
+            <div class="alacc">
+                <p>Already have an account? </p>
+
+<!--                <Link to="/login" class="click">-->
+                <p class="login">Log in</p>
+<!--                </Link>-->
+
+            </div>
+
+            <form action="">
+
+                <label  class="email">Full Name</label>
+                <input onChange={onChangeFullName} value={fullName} type="text" class="input-email" />
+
+                <label  class="email">Email</label>
+                <input onChange={onChangeEmail} value={email} type="email" class="in-email" />
+
+                <div class="conpass">
+                    <label  class="pass">Password</label>
+                    <input onChange={onChangePassword} value=""
+<!--                           type={togglePass ? "password" : "text"} id="password" className={`in-password ${minPassword ? 'red' : 'green' }`} -->
+                    placeholder="Must be at least 6 characters" />
+<!--                    <FontAwesomeIcon onClick={showPassword} className="pass-svg" icon={icon}/>-->
+                </div>
+
+                <div class="ccon">
+                    <input onChange={onChecked} type="checkbox" name="check" class="check"/><label>Sign up for email updates.</label>
+                </div>
+
+                <button onClick={onClickRegister} class="signingup">SIGN UP</button>
+
+            </form>
+
+            <p class="agreed">By continuing, you agree to accept our
+                <span class="policy">Privacy Policy & Terms of Service.</span>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
