@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="11" />
-      <module name="first_springboot_rakutech" target="11" />
+      <module name="first_springboot_rakutech" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
