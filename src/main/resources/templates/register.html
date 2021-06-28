@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>register</title>
@@ -24,7 +24,7 @@
                 <p>Already have an account? </p>
 
 <!--                <Link to="/login" class="click">-->
-                <p class="login">Log in</p>
+                <a th:href="/@{/login}" class="login">Log in</a>
 <!--                </Link>-->
 
             </div>

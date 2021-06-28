@@ -1,0 +1,144 @@
+.newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter__background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  /* The image used */
+  background-color: black;
+  opacity: 50%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter__popup {
+  -webkit-box-shadow: 5px 5px 18px;
+          box-shadow: 5px 5px 18px;
+  margin-top: 20vh;
+  position: fixed;
+  background-color: white;
+  z-index: 3;
+  width: 48rem;
+  height: 23rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+
+.newsletter__popup .close {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  height: 47px;
+  width: 47px;
+  border-radius: 25px;
+  background-color: #22262A;
+  outline: none;
+  border: none;
+}
+
+.newsletter__popup .close svg {
+  color: grey;
+  font-size: 15px;
+}
+
+.newsletter__popup--content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 6;
+      -ms-flex: 6 1;
+          flex: 6 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 3rem;
+  gap: 1rem;
+  padding: 4em;
+}
+
+.newsletter__popup--content h1 {
+  font-size: 28px;
+  color: #22262A;
+}
+
+.newsletter__popup--content span {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.newsletter__popup--content form {
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter__popup--content form input[type=text], .newsletter__popup--content form button {
+  padding: 15px 30px;
+  border: 1px solid #F1F3F4;
+  outline: none;
+}
+
+.newsletter__popup--content form button {
+  color: white;
+  background-color: #33A0FF;
+}
+
+.newsletter__popup--content #checkbox-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter__popup--content #checkbox-form input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+
+.newsletter__popup--content #checkbox-form label {
+  font-size: 10pt;
+}
+
+.newsletter__popup--img {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.newsletter__popup--img img {
+  height: 100%;
+  width: 100%;
+}
+
+.newsletter__popup .close:hover {
+  background: black;
+}
+/*# sourceMappingURL=Newsletter.css.map */

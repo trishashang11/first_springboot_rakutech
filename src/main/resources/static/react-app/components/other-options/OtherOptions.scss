@@ -1,0 +1,22 @@
+.freefundsupport{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    .box{
+        // border: 1px solid blue;
+        width: 320px;
+        padding: 30px 0;
+
+        svg{
+            color: red;
+            font-size: 30pt;
+        }
+        h3{
+            margin: 20px;
+        }
+        p{
+            line-height: 1.6;
+        }
+    }
+}

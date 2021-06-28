@@ -1,0 +1,147 @@
+.ck-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ck-title .tp {
+  margin-right: 28rem;
+}
+
+.ck-title .tq {
+  margin-right: 30px;
+}
+
+.ck-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.ck-list .del {
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.ck-list img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ck-list .uprice {
+  width: 80px;
+  text-align: right;
+}
+
+.qty {
+  border: none;
+  padding: 10px;
+  background: #F6F7F8;
+  text-align: center;
+  width: 50px;
+}
+
+.qty:focus {
+  outline: none;
+}
+
+.sub,
+.add {
+  width: 50px;
+  background-color: #F6F7F8;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.sub svg,
+.add svg {
+  color: #33A0FF;
+}
+
+.ck-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+
+.voucher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 124px 120px 124px 20px;
+}
+
+.voucher .in-voucher {
+  padding: 15px 80px 15px 15px;
+  border-radius: 0;
+  border: 1px solid #F1F3F4;
+}
+
+.voucher .btn {
+  padding: 20px 40px;
+  background-color: #33A0FF;
+  font-size: 14px;
+  color: white;
+  border: none;
+}
+
+.ck-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 520px;
+  height: 300px;
+  padding: 20px 20px;
+}
+
+.ck-form .ck-dul {
+  width: 100%;
+}
+
+.ck-form .ck-dli {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.ck-form .ck-order {
+  font-size: 16px;
+  padding: 20px;
+  color: white;
+  background-color: #33A0FF;
+  border: none;
+  width: 100%;
+}
+/*# sourceMappingURL=Checkout.css.map */

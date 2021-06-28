@@ -1,0 +1,116 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid #c7c7c7;
+    background-color: #fff;
+    padding: 15px 10px 30px;
+    // width: 200px;
+    // height: 240px;
+
+    .card-image {
+        width: 170px;
+        height: 150px;
+        // margin-top: 12px;
+        margin: 0 auto;
+        position: relative;
+        // border: 1px solid red;
+
+        img{
+        width: 170px;
+        height: 149px;
+        object-fit: contain;
+        // border: 1px solid green;
+        }
+        &:hover .card-overlay{
+            cursor: pointer;
+            opacity: 90%;
+        }
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease;
+            background-color: #fafafa;
+            gap: 42px;
+            // border: 1px solid red;
+
+            svg{
+                color: #0891bb;
+                opacity: 1;
+            }
+        }
+
+
+    }
+    .card-name{
+    width: 160px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: .5px;
+    }
+
+    .price {
+        display: flex;
+        gap: 10px;
+
+        p:first-child {
+            color: #f60000;
+        }
+
+        p:last-child {
+            color: #c7c7c7;
+            text-decoration: line-through;
+        }
+    }
+
+}
+
+.hot {
+    position: relative;
+
+    &::after {
+        content: "HOT";
+        position: absolute;
+        background-color: #FD2E2E;
+        padding: 5px;
+        left: 10px;
+        top: 10px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        font-size: 8pt;
+        color: white;
+    }
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    
+}
+.load{
+    color: #0891bb;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    width: 90px;
+    border-bottom: 3px solid transparent;
+
+    &:hover{
+        border-bottom: 3px solid #0891bb;
+        cursor: pointer;
+
+
+    }
+}

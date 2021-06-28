@@ -1,0 +1,28 @@
+.tp-nav {
+  background: #fafbfb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  gap: 10px;
+  padding: 10px 0;
+  margin: 40px 0;
+  color: #d3d3d3;
+}
+
+.tp-nav p {
+  color: #000;
+  letter-spacing: 1px;
+  font-size: 10pt;
+}
+
+.tp-nav p:hover {
+  color: #1ba9fc;
+}
+/*# sourceMappingURL=TopNav.css.map */

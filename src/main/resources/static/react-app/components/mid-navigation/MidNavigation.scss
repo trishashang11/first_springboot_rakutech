@@ -1,0 +1,22 @@
+div{
+    text-align: center;
+}
+.md-title{
+    margin: 60px 0 30px 0;
+}
+.md-ul{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.md-li{
+    list-style-type: none;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+
+    &:hover{
+        border-bottom: 3px solid #46c3f5;
+        cursor: pointer;
+        color: #46c3f5;
+    }
+}
