@@ -1,30 +1,41 @@
 package com.rakutech.demo.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
 
 @Entity
-@Table(name = "user")
+@Table(name="user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long Id;
 
-    @Column(nullable = false, unique = true, length = 45)
+    @Column(name = "first_name", nullable = false, length = 45)
+    private String firstName;
+
+    @Column(nullable = false, length = 45)
     private String email;
 
     @Column(nullable = false, length = 65)
     private String password;
 
-    @Column(name="full_name", nullable = false, length = 35)
-    private String fullname;
-
-    public long getId() {
-        return id;
+    public User(String firstName, String email, String password) {
+        this.firstName = firstName;
+        this.email = email;
+        this.password = password;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getEmail() {
@@ -42,12 +53,8 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public Long getId() {
+        return Id;
     }
 }
+

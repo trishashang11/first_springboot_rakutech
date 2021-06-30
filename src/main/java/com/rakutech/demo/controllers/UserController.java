@@ -1,26 +1,70 @@
 package com.rakutech.demo.controllers;
 
 
-import com.rakutech.demo.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.Optional;
 
-@Controller
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rakutech.demo.model.User;
+import com.rakutech.demo.repository.UserRepository;
+
+
+@RestController
+@RequestMapping("/api")
 public class UserController {
 
-    @Autowired
-    private UserRepository UserRepo;
+    private final Logger log = LoggerFactory.getLogger(UserController.class);
+    private UserRepository userRepository;
 
-    @RequestMapping("/register")
-    public String register(){
-
-        return "register";
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    @RequestMapping("/login")
-    public String login(){
-
-        return  "login";
+    @GetMapping("/users")
+    Collection<User> customers() {
+        return userRepository.findAll();
     }
+
+    @GetMapping("/user/{id}")
+    ResponseEntity<?> getUser(@PathVariable Long id) {
+        Optional<User> user = userRepository.findById(id);
+        return user.map(response -> ResponseEntity.ok().body(response))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @PostMapping("/user")
+    ResponseEntity<User> createUser(@RequestBody User user) throws URISyntaxException {
+        log.info("Request to create user: {}", user);
+        User result = userRepository.save(user);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @PutMapping("/user")
+    ResponseEntity<User> updateGroup(@RequestBody User user) {
+        log.info("Request to update user: {}", user);
+        User result = userRepository.save(user);
+        return  ResponseEntity.ok().body(result);
+    }
+
+    @DeleteMapping("/user/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
+        log.info("Request to delete customer: {}", id);
+        userRepository.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
+
 }
