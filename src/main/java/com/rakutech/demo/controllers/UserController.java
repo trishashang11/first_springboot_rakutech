@@ -46,6 +46,13 @@ public class UserController {
         return ResponseEntity.ok().body(result);
     }
 
+    @PostMapping("/auth")
+    ResponseEntity<User> auth(@RequestBody User user) throws URISyntaxException {
+        log.info("Request auth: {}", user);
+        User result = userRepository.authenticate(user.getEmail(), user.getPassword());
+        return ResponseEntity.ok().body(result);
+    }
+
     @PutMapping("/user")
     ResponseEntity<User> updateGroup(@RequestBody User user) {
         log.info("Request to update user: {}", user);
