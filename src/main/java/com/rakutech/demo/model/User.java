@@ -10,6 +10,7 @@ import javax.persistence.Column;
 @Entity
 @Table(name="user")
 public class User {
+    public User() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,12 @@ public class User {
 
     @Column(nullable = false, length = 65)
     private String password;
+
+    @Override
+    public String toString() {
+        return String.format("Id=%d, firstName='%s', email='%s', password='%s'",
+                Id, firstName, email, password);
+    }
 
     public User(String firstName, String email, String password) {
         this.firstName = firstName;
@@ -53,8 +60,14 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public Long getId() {
         return Id;
     }
+
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
 }
 

@@ -1,7 +1,7 @@
 package com.rakutech.demo.controllers;
 
 
-import java.net.URI;
+//import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
@@ -10,19 +10,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.rakutech.demo.model.User;
 import com.rakutech.demo.repository.UserRepository;
 
-
+@CrossOrigin(origins="*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -35,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    Collection<User> customers() {
+    Collection<User> users() {
         return userRepository.findAll();
     }
 
