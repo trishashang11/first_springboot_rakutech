@@ -1,0 +1,92 @@
+.featuredproducts {
+  margin: 20px 0;
+}
+
+.featuredproducts h2 {
+  margin-bottom: 30px;
+}
+
+.featuredproducts .featured-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 90px;
+}
+
+.featuredproducts .featured-container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  gap: 10px;
+}
+
+.featuredproducts .featured-container .box .box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.featuredproducts .featured-container .box .box-content .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.featuredproducts .featured-container .box .box-content .price .price1 {
+  color: red;
+}
+
+.featuredproducts .featured-container .box .box-content .price .price2 {
+  color: #a3a0a0;
+  text-decoration: line-through;
+}
+
+.featuredproducts .featured-container .box img {
+  width: 100px;
+}
+
+.featuredproducts .search {
+  margin: 110px 0 150px 0;
+}
+
+.featuredproducts .search .input-search {
+  background-color: transparent;
+  border: 1px solid lightgray;
+  width: 500px;
+  height: 62px;
+  padding: 0 20px;
+}
+
+.featuredproducts .search .input-search:focus {
+  outline: none;
+}
+
+.featuredproducts .search .search-btn {
+  background-color: #33A0FF;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 25px 40px;
+  letter-spacing: 1px;
+}
+
+.featuredproducts .search .search-btn:hover, .featuredproducts .search .search-btn:active, .featuredproducts .search .search-btn:focus {
+  cursor: pointer;
+  outline: none;
+  background-color: #298de6;
+}
+/*# sourceMappingURL=FeaturedProducts.css.map */

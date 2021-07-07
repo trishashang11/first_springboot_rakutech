@@ -1,0 +1,21 @@
+    .tp-nav{
+        background:#fafbfb ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        gap: 10px;
+        padding: 10px 0;
+        margin: 40px 0;
+        color: #d3d3d3;
+
+        p{
+            color: #000;
+            letter-spacing: 1px;
+            font-size: 10pt;
+
+            &:hover{
+                color: #1ba9fc;
+            }
+        }
+    }

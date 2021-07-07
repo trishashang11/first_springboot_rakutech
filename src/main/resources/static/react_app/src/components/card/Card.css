@@ -1,0 +1,130 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  padding: 15px 10px 30px;
+}
+
+.card .card-image {
+  width: 170px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card .card-image img {
+  width: 170px;
+  height: 149px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card .card-image:hover .card-overlay {
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.card .card-image .card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background-color: #fafafa;
+  gap: 42px;
+}
+
+.card .card-image .card-overlay svg {
+  color: #0891bb;
+  opacity: 1;
+}
+
+.card .card-name {
+  width: 160px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+.card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.card .price p:first-child {
+  color: #f60000;
+}
+
+.card .price p:last-child {
+  color: #c7c7c7;
+  text-decoration: line-through;
+}
+
+.hot {
+  position: relative;
+}
+
+.hot::after {
+  content: "HOT";
+  position: absolute;
+  background-color: #FD2E2E;
+  padding: 5px;
+  left: 10px;
+  top: 10px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 8pt;
+  color: white;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.load {
+  color: #0891bb;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  width: 90px;
+  border-bottom: 3px solid transparent;
+}
+
+.load:hover {
+  border-bottom: 3px solid #0891bb;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Card.css.map */

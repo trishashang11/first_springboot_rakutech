@@ -1,0 +1,56 @@
+.mid-banner {
+  width: 100%;
+  height: 420px;
+  background: #2e90e5;
+  margin: 130px 0;
+}
+
+.md-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.md-banner .md-text {
+  text-align: left;
+  color: #fff;
+  margin-top: -100px;
+}
+
+.md-banner .md-text .md-p {
+  margin: 50px 0;
+  font-size: 15pt;
+  width: 340px;
+}
+
+.md-banner .md-text .md-shop {
+  border-bottom: 3px solid transparent;
+  width: 84px;
+  padding-bottom: 5px;
+}
+
+.md-banner .md-text .md-shop:hover {
+  border-bottom: 3px solid #fff;
+  cursor: pointer;
+}
+
+.md-banner .mid-image {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  overflow: hidden;
+  top: -100px;
+}
+
+.md-banner .mid-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=MidBanner.css.map */

@@ -1,0 +1,28 @@
+.freefundsupport {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+}
+
+.freefundsupport .box {
+  width: 320px;
+  padding: 30px 0;
+}
+
+.freefundsupport .box svg {
+  color: red;
+  font-size: 30pt;
+}
+
+.freefundsupport .box h3 {
+  margin: 20px;
+}
+
+.freefundsupport .box p {
+  line-height: 1.6;
+}
+/*# sourceMappingURL=OtherOptions.css.map */

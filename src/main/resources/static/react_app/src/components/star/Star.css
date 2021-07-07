@@ -1,0 +1,11 @@
+.star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fbd602;
+}
+
+.gray {
+  color: gray;
+}
+/*# sourceMappingURL=Star.css.map */

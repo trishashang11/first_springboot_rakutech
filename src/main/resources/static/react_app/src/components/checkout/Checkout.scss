@@ -1,0 +1,129 @@
+.ck-title {
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid red;
+    margin-bottom: 20px;
+    // text-align: left;
+
+
+
+    .tp {
+        margin-right: 28rem;
+    }
+
+    .tq {
+        margin-right: 7px;
+    }
+}
+
+.ck-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+
+    .del {
+        color: red;
+        font-weight: bolder;
+        cursor: pointer;
+
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    .ck-h4{
+        width: 275px;
+    }
+    .uprice{
+        // border: 1px solid red;
+        width: 80px;
+        text-align: right;
+    }
+}
+
+.qty {
+    border: none;
+    padding: 10px;
+    background: #F6F7F8;
+    text-align: center;
+    width: 50px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.sub,
+.add {
+    width: 50px;
+    background-color: #F6F7F8;
+    border: none;
+    outline: none;
+    padding: 10px;
+
+
+    svg {
+        color: #33A0FF;
+    }
+}
+
+.ck-payment {
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid green ;
+    margin: 30px 0;
+}
+
+
+.voucher {
+    display: flex;
+    // border: 1px solid red;
+    padding: 124px 120px 124px 20px;
+
+    .in-voucher {
+        padding: 15px 80px 15px 15px;
+        border-radius: 0;
+        border: 1px solid #F1F3F4;
+    }
+
+    .btn {
+        padding: 20px 40px;
+        background-color: #33A0FF;
+        font-size: 14px;
+        color: white;
+        border: none;
+    }
+}
+
+.ck-form {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 520px;
+    height: 300px;
+    padding: 20px 20px;
+
+    .ck-dul {
+        width: 100%;
+    }
+
+    .ck-dli {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 20px 0;
+    }
+
+    .ck-order {
+        font-size: 16px;
+        padding: 20px;
+        color: white;
+        background-color: #33A0FF;
+        border: none;
+        width: 100%;
+    }
+}
