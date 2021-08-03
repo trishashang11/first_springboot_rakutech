@@ -2,23 +2,36 @@ package com.rakutech.demo.controllers;
 
 
 //import java.net.URI;
+import com.rakutech.demo.model.AuthenticationResponse;
+import com.rakutech.demo.model.User;
+import com.rakutech.demo.repository.UserRepository;
+import com.rakutech.demo.service.MyUserDetailsService;
+import com.rakutech.demo.util.JwtUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.web.bind.annotation.*;
+
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import com.rakutech.demo.model.User;
-import com.rakutech.demo.repository.UserRepository;
 
 @CrossOrigin(origins="*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api")
 public class UserController {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private MyUserDetailsService userDetailsService;
+
+    @Autowired
+    private JwtUtil jwtTokenUtil;
 
     private final Logger log = LoggerFactory.getLogger(UserController.class);
     private UserRepository userRepository;
@@ -44,6 +57,16 @@ public class UserController {
         log.info("Request to create user: {}", user);
         User result = userRepository.save(user);
         return ResponseEntity.ok().body(result);
+    }
+
+    @PostMapping("/authenticate")
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody User user) throws Exception {
+        User result = userRepository.authenticate(user.getEmail(), user.getPassword());
+        if (result != null) {
+            final String jwt = jwtTokenUtil.generateToken(result);
+            return ResponseEntity.ok().body(new AuthenticationResponse(jwt));
+        }
+        return ResponseEntity.badRequest().body(null);
     }
 
     @PostMapping("/auth")

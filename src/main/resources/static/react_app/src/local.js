@@ -1,6 +1,6 @@
 
 const local = {
-	api: 'http://rakutech-env-3.eba-btq3tf9s.us-east-2.elasticbeanstalk.com/api',
+	api: 'http://localhost:5000/api',
       }
       
       export default local;

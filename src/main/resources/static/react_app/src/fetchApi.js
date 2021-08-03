@@ -47,7 +47,7 @@ export const getUser = async (obj) =>{
 
 export const checkAcc = async (obj) =>{
     const load = JSON.stringify(obj);
-    const response = await fetch(`${local.api}/auth`, {
+    const response = await fetch(`${local.api}/authenticate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

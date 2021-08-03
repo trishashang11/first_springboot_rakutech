@@ -28,8 +28,8 @@ const onClickLogin = () =>{
         password
     }
     checkAcc(load).then(data=>{
-        if(data.id) {
-            localStorage.setItem('rakuten_authenticated', "true");
+        if(data.jwt) {
+            localStorage.setItem('rakuten_jwt', data.jwt);
             window.location.pathname='/'
         }
     })
